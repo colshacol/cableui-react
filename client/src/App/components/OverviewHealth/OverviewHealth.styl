@@ -1,0 +1,32 @@
+.OverviewHealth {
+  align-items: center;
+  padding: 10px 0;
+
+  & > .container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 90px;
+    flex-direction: column;
+
+    .circle {
+      padding-top: 90%;
+      max-height: 90px;
+      position: relative;
+      border-radius: 50%;
+      background: none;
+      border: 5px solid var(--green0);
+      justify-content: center;
+      align-items: center;
+
+      p {
+        position: relative;
+        bottom: 40px;
+        font-weight: 400;
+      }
+    }
+
+    .subtitle {
+      margin-top: 10px;
+    }
+  }
+}

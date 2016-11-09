@@ -1,0 +1,16 @@
+{
+  "compsPath": "./client/src",
+
+  "templates": {
+    "comp": {
+      "path": "./client/src/_Templates/component"
+    },
+    "view": {
+      "path": "./client/src/_Templates/view"
+    }
+  },
+
+  "variables": {
+    "$CSS" : "styl"
+  }
+}
