@@ -1,0 +1,21 @@
+._filter-input {
+	background: none;
+	color: var(--gray0);
+	font-size: 1.4rem;
+	margin-left: 15px;
+	padding: 0 15px 2px 0;
+	width: 100%;
+	letter-spacing: 2px;
+	height: 45px;
+	font-family: var(--font0);
+	position: relative;
+	top: 3px;
+}
+
+._filter-input::-webkit-input-placeholder {
+	color: var(--gray0);
+	font-size: 1.4rem;
+	font-weight: 300;
+	font-family: var(--font0);
+	letter-spacing: 2px;
+}

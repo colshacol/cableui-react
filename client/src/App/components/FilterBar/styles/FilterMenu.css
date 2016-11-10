@@ -1,4 +1,4 @@
-.FiltersMenu {
+._filter-menu.shown-false {
   background: whitesmoke;
   flex-direction: column;
   height: 0px;
@@ -7,8 +7,8 @@
   z-index: 50;
   box-shadow: 0 0 20px rgba(0,0,0,1);
   overflow: hidden;
+}
 
-  &.shown-true {
-    height: 150px;
-  }
+._filter-menu.shown-true {
+  height: 150px;
 }

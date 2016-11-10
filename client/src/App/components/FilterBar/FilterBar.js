@@ -1,46 +1,35 @@
 import React, { Component } from 'react'
-import { Link, browserHistory } from 'react-router'
 import { observer } from 'mobx-react'
-import { action, observable } from 'mobx'
-import axios from 'axios'
+import { observable } from 'mobx'
 
-import './FilterBar.styl'
-import FiltersStore from '$Stores/Filters.store'
-import LocationsStore from '$Stores/Locations.store'
+import './styles/FilterBar.css'
 
-import FiltersMenu from '$Components/FiltersMenu/FiltersMenu'
-import SearchIcon from './search.svg'
-import ArrowIcon from './arrow.svg'
+import FiltersStore from 'stores/Filters.store'
 
-@observer export default class FilterBar extends Component {
+
+import FilterMenu from './FilterMenu'
+import FilterInput from './FilterInput'
+import MiniButton from '../Buttons/MiniButton'
+import SearchIcon from 'assets/SearchIcon.svg'
+
+@observer
+export default class FilterBar extends Component {
+  @observable
+    filterMenuShown = false
+
   render() {
     return (
-      <div className="FilterBar">
-        <div className="container">
-          <div className="search">
-            <SearchIcon className="SearchIcon"/>
-            <input
-              onChange={FiltersStore.filterLocations}
-              value={FiltersStore.filterQuery}
-              placeholder="search locations"
-            />
-            <div
-              onClick={FiltersStore.clearUserInput}
-              className="mini-button"
-            >
-              <p>CLEAR</p>
-            </div>
-            <div
-              onClick={FiltersStore.toggleFiltersMenu}
-              className="mini-button"
-            >
-              <p>FILTERS</p>
-            </div>
+      <div class="_filter-bar">
+        <div class="container">
+          <div class="search">
+            <SearchIcon class="_search-icon" />
+            <FilterInput onChange={FiltersStore.filterLocations}/>
+            <MiniButton text="CLEAR" onClick={FiltersStore.clearUserInput} />
+            <MiniButton text="FILTERS" onClick={FiltersStore.toggleFilterMenu} />
           </div>
         </div>
-        <FiltersMenu
-          isShown={`shown-${FiltersStore.filtersMenuVisibilityClass}`}
-        />
+
+        <FilterMenu isShown={this.filterMenuShown} />
       </div>
     )
   }

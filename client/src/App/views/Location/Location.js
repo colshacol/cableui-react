@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 
-import './NotFound.css'
-import store from './NotFound.store.js'
+import './Location.css'
 
-@observer
-export default class NotFound extends Component {
+@observer export default class Location extends Component {
   render() {
     return (
-      <div class="NotFound">
+      <div class="_location">
         <div class="container">
         </div>
       </div>

@@ -1,13 +1,17 @@
+/* @flow */
 
-import LocationsStore from '$Stores/Locations.store'
-
-export function initializeApp(len, int) {
-  setInterval(() => {
-    LocationsStore.data.push({
-      "one": Math.floor(Math.random() * (100 - 83) + 83),
-      "two": Math.floor(Math.random() * (100 - 45) + 45),
-      "three": Math.floor(Math.random() * (100 - 67) + 67)
-    })
-    if (LocationsStore.data.length > len) LocationsStore.data.shift(1)
-  }, int)
+export default {
+  initDataStream(i: number, x:number, a: typeof ObservableArray) {
+    setInterval(() => {
+      a.forEach(l => {
+        if (l.data.length > i) { l.data.shift(1) }
+        l.dataPush({
+          a: Math.floor(Math.random() * (20 - 15) + 15),
+          b: Math.floor(Math.random() * (30 - 20) + 20),
+          c: Math.floor(Math.random() * (40 - 30) + 30),
+          d: Math.floor(Math.random() * (50 - 35) + 35)
+        })
+      })
+    }, x)
+  }
 }

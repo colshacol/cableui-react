@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
-import { Link, browserHistory } from 'react-router'
 import { observer } from 'mobx-react'
-import axios from 'axios'
+import { browserHistory } from 'react-router'
 
-import './Login.styl'
-import UserStore from '$Stores/User.store'
+import css from './Login.css'
+import UserStore from 'stores/User.store'
 
-
-@observer export default class Login extends Component {
-  // shouldComponentUpdate() {}
-  componentWillMount() {if (UserStore.loggedIn) browserHistory.push('/dash')}
-
-  componentDidMount() {}
+@observer
+export default class Login extends Component {
+  componentWillMount() { if (UserStore.loggedIn) browserHistory.push('/dash') }
 
   render() {
     return (
-      <div id="Login" className="comp">
-        <div className="container">
+      <div id="Login">
+        <div class="container">
           <p>Login</p>
         </div>
       </div>

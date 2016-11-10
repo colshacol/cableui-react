@@ -1,0 +1,16 @@
+._mini-button {
+	min-width: 60px;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	border-radius: 12px;
+	padding: 5px 8px 4px;
+	margin-left: 20px;
+}
+
+._mini-button > p {
+	letter-spacing: 1px;
+	color: var(--gray0);
+	font-size: 1rem;
+}

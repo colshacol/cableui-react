@@ -1,25 +1,33 @@
 import React, { Component } from 'react'
-import { Link, browserHistory } from 'react-router'
 import { observer } from 'mobx-react'
-import { observable } from 'mobx'
-import axios from 'axios'
 
-import './Dash.styl'
+import './Dash.css'
 
-import UserStore from '$Stores/User.store'
-import CssStore from '$Stores/Css.store'
+import $fns from 'fns/fns'
 
-import NavColumn from '$Components/NavColumn/NavColumn'
-import FilterBar from '$Components/FilterBar/FilterBar'
- 
-@observer export default class Dash extends Component {
+import UserStore from 'stores/User.store'
+import CssStore from 'stores/Css.store'
+import DashStore from './Dash.store'
+
+import NavColumn from 'comps/NavColumn/NavColumn'
+import FilterBar from 'comps/FilterBar/FilterBar'
+import DevTools from 'mobx-react-devtools'
+
+@observer
+export default class Dash extends Component {
+  componentDidMount() {
+    $fns.initDataStream(20, 300, DashStore.locations)
+  }
+
   render() {
     const classes = CssStore.rightColumn.join(' ')
+
     return (
-      <div className="Dash">
-        <div className="container">
+      <div class="_dash">
+        <DevTools/>
+        <div class="container">
           <NavColumn />
-          <div className={`right-column ${classes}`}>
+          <div class={`right-column ${classes}`}>
             <FilterBar />
             {this.props.children}
           </div>

@@ -1,0 +1,29 @@
+._filter-bar {
+	flex-direction: column;
+	background: var(--darkest);
+	box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+._filter-bar > .container {
+	width: 100%;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 99;
+	position: relative;
+}
+
+._filter-bar > .container > .search {
+	z-index: 100;
+	height: 65px;
+	width: calc(100% - 60px);
+	margin: 0 auto;
+	align-items: center;
+	padding: 15px 0 15px;
+	background: var(--darkest);
+}
+
+._filter-bar > .container > .search > ._search-icon {
+	width: 20px;
+	height: 20px;
+}

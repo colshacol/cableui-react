@@ -1,0 +1,45 @@
+.inactive-overview-stats {
+	visibility: hidden;
+}
+
+._overview-stats {
+	height: 100%;
+	width: 100%;
+	background: rgba(32,43,51,0.9);
+	top: 3px;
+	max-height: 220px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: relative;
+	left: -200%;
+	z-index: 49;
+	padding: 25px 0;
+	flex-direction: column;
+}
+
+._overview-stats::-webkit-scrollbar {
+	width: 6px;
+}
+
+._overview-stats::-webkit-scrollbar-track {
+	background: var(--dark1);
+}
+
+._overview-stats.shown-false {
+	visibility: hidden;
+}
+
+._overview-stats.shown-true {
+	visibility: visible;
+}
+
+._overview-stats > p:first-of-type {
+	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
+._overview-stats > .stat-average {
+	font-size: 1.2rem;
+	color: red;
+	margin-left: 30px;
+}

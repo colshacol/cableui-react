@@ -1,0 +1,105 @@
+._nav-column {
+	height: 100%;
+	width: 245px;
+	padding: 0 40px 0 35px;
+	z-index: 100;
+}
+
+._nav-column > .container {
+	min-height: 100%;
+	padding: 30px 0;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+._nav-column > .container::-webkit-scrollbar {
+	width: 2px;
+}
+
+._nav-column > .container::-webkit-scrollbar-track {
+	background: var(--dark2);
+}
+
+._nav-column > .container > .logo {
+	flex-wrap: wrap;
+	height: 45px;
+	margin-bottom: 45px;
+}
+
+._nav-column > .container > .logo > p:first-of-type {
+	cursor: pointer;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+._nav-column > .container > .logo > p:last-of-type {
+	font-size: 1.2rem;
+	font-style: italic;
+	color: var(--gray0);
+	font-family: 'Helvetica';
+}
+
+._nav-column > .container > .logo > p:last-of-type > span {
+	cursor: pointer;
+}
+
+._nav-column > .container > .navigation {
+	flex-direction: column;
+}
+
+._nav-column > .container > .navigation > .nav-list {
+	padding-bottom: 25px;
+	flex-direction: column;
+	width: 165px;
+}
+
+._nav-column > .container > .navigation > .nav-list > .title {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul {
+	list-style-type: none;
+	margin-bottom: 25px;
+}
+
+._nav-column>  .container > .navigation > .nav-list > ul > li {
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: 11px 0 10px;
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul > li > p {
+	font-size: 1.4rem;
+	color: var(--gray0);
+	font-weight: 300;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul > li > .circle {
+	align-items: center;
+	justify-content: center;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul > li > .circle > p {
+	color: var(--gray0);
+	font-family: 'Helvetica';
+	font-size: 1.25rem;
+	font-weight: 600;
+	position: relative;
+	top: 1px;
+	right: 0.5px;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul > li:hover > p {
+	color: #fff;
+}
+
+._nav-column > .container > .navigation > .nav-list > ul > li:hover > .circle > p {
+	color: #fff;
+}
