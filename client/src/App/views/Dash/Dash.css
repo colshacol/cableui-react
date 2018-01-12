@@ -9,9 +9,8 @@
   justify-content: center;
 
   & > .container {
-    height: calc(100% - 60px);
-    width: calc(100vw - 60px);
-    max-width: 1200px;
+    height: 100vh;
+    width: 100vw;
     background: var(--dark0);
 
     & > .right-column {
